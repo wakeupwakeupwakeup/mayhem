@@ -95,7 +95,7 @@
 
   .background-title {
     @apply text-[64px] sm:text-[100px] md:text-[110px] lg:text-[110px] xl:text-[110px] 2xl:text-[300px] text-center uppercase font-bold leading-none;
-    background: url("../../assets/h1bg.png") no-repeat center top;
+    background: url("../../public/h1bg.png") no-repeat center top;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }
@@ -115,7 +115,7 @@
   }
 
   .circles {
-    background: url("../../assets/circles.svg") no-repeat center center;
+    background: url("../../public/circles.svg") no-repeat center center;
   }
 
   .socials span, .link, .email {
