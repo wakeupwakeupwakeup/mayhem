@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-normal leading-none text-base;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #9FA0A3
+  }
+
+  body {
+    background-color: #080812;
+  }
+
+  p, a {
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  section, header {
+    @apply px-6 md:px-16
+  }
+
+  section {
+    @apply mb-40
+  }
+
+  header {
+    @apply pt-12 md:pt-5 pb-12
+  }
+
+  .footer-gradient {
+    background-image: linear-gradient(to left, #F65A78, #F9AE86);
+  }
+
+  a {
+    @apply px-10 py-5 font-medium
+
+  }
+
+  h2 {
+    @apply text-2xl md:text-6xl text-white font-bold uppercase text-center mb-6 md:mb-12
+  }
+
+  .button {
+    @apply border;
+    border-image: linear-gradient(to right, #F65A78, #F9AE86) 1;
+    background: linear-gradient(to right, #F65A78, #F9AE86) padding-box;
+    color: #1A1A1A;
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .button-filled {
+    @apply rounded-lg;
+    background: linear-gradient(to right, #F65A78, #F9AE86) padding-box;
+    color: #1A1A1A;
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .menu-link {
+    @apply text-[#505050] text-2xl;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .menu-link:hover {
+    background-image: linear-gradient(to right, #F65A78, #F9AE86);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background-image: linear-gradient(to left, #F65A78, #F9AE86);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .background-title {
+    @apply text-[64px] sm:text-[100px] md:text-[110px] lg:text-[110px] xl:text-[110px] 2xl:text-[300px] text-center uppercase font-bold leading-none;
+    background: url("../../assets/h1bg.png") no-repeat center top;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .services>div:nth-child(odd) h3, .services div:nth-child(odd) a {
+      background-image: linear-gradient(to right, #F65A78, #F9AE86);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+  }
+
+  .services>div:nth-child(even) {
+    background-image: linear-gradient(to left, #F65A78, #F9AE86);
+
+    h3, p, a {
+      color: #0B0B0F;
+    }
+  }
+
+  .circles {
+    background: url("../../assets/circles.svg") no-repeat center center;
+  }
+
+  .socials span, .link, .email {
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  footer a {
+    color: #F7F7F7
+  }
+
+  footer nav a {
+    @apply p-0
+  }
+}
