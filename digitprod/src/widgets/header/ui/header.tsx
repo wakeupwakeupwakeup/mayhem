@@ -20,7 +20,7 @@ const menu = [
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
     return (
-        <header className={"w-full"}>
+        <header id={"home"} className={"w-full"}>
             <div className={"flex items-center justify-between"}>
                 <span className={"w-1/3 uppercase font-light text-white md:text-3xl"}>Mayhem Media</span>
                 <nav className={isMenuOpen? "flex w-full md:flex justify-center gap-12" : "hidden w-full md:flex justify-center gap-12"}>
