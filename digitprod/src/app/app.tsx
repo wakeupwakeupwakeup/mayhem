@@ -143,7 +143,7 @@ function App() {
                                 <div key={index}
                                      className={"md:flex flex-col justify-between md:w-1/3 pb-12 border border-[#505050] rounded"}>
                                     <div className={"relative min-h-[630px]"}>
-                                        <div className={"relative overflow-hidden h-[480px]"}>
+                                        <div className={"relative overflow-hidden min-h-[480px]"}>
                                             <img
                                                 src={service.image}
                                                 className={
