@@ -89,7 +89,7 @@ function App() {
                             {
                                 logos.map((index) => (
                                     <div className={"p-3 w-[40vw] md:w-fit"}>
-                                        <img src={`/logos/${index+1}.svg`}/>
+                                        <img src={`/logos/${index}.svg`}/>
                                     </div>
                                 ))
                             }
