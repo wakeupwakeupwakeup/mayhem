@@ -2,6 +2,7 @@ import {Header} from "../widgets/header"
 import {Footer} from "../widgets/footer"
 
 import {Fade, Slide} from "react-awesome-reveal";
+import {useParallax} from "react-scroll-parallax";
 
 const services = [
     {
@@ -25,11 +26,14 @@ const itemsCount = 12;
 const logos = Array.from({ length: itemsCount }, (_, index) => index + 1)
 
 function App() {
+    const { ref } = useParallax({
+        speed: 20,
+    });
     return (
         <>
             <Header/>
             <main>
-                <section className={"mb-36"}>
+                <section className={"mb-36"} ref={ref}>
                     <h1>
                         <Slide direction={"down"} triggerOnce={true}>
                             <span className={"text-lg md:text-[64px] uppercase leading-none text-white"}>With great influencers</span><br/>
