@@ -25,7 +25,7 @@ function App() {
 
     useEffect(() => {
         const fetchImagePaths = async () => {
-            const imageModules = import.meta.glob('/logos/*.svg')
+            const imageModules = import.meta.glob('/public/logos/*.svg')
             const paths = Object.keys(imageModules)
             setImagePaths(paths)
             console.log(paths)
