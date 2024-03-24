@@ -1,6 +1,8 @@
 import {Header} from "../widgets/header"
 import {Footer} from "../widgets/footer"
 
+import {Fade, Slide} from "react-awesome-reveal";
+
 const services = [
     {
         name: "Creative campaigns",
@@ -29,8 +31,13 @@ function App() {
             <main>
                 <section className={"mb-36"}>
                     <h1>
-                        <span className={"text-lg md:text-[64px] uppercase leading-none text-white"}>With great influencers</span><br/>
-                        <span className={"background-title"}>Great brands</span>
+                        <Slide direction={"down"} triggerOnce={true}>
+                            <span className={"text-lg md:text-[64px] uppercase leading-none text-white"}>With great influencers</span><br/>
+                        </Slide>
+                        <Slide triggerOnce={true}>
+                            <span className={"background-title"}>Great brands</span>
+                        </Slide>
+
                     </h1>
                     <div className={"flex flex-col-reverse md:flex-row md:gap-32 justify-between relative h-[720px]"}>
                         <div className={"flex flex-col gap-12 w-full md:w-1/3 md:pt-52"}>
@@ -50,47 +57,61 @@ function App() {
                 <section>
                 </section>
                 <section id={"services"} className={"mb-36"}>
-                    <h2>Our services</h2>
-                    <div className={"flex flex-col md:flex-row gap-5 services  relative"}>
-                        {
-                            services.map((service, index) => (
-                                <div key={index}
-                                     className={"md:flex flex-col justify-between md:w-1/3 pb-12 border border-[#505050] rounded"}>
-                                    <div className={"relative min-h-[630px]"}>
-                                        <div className={"relative overflow-hidden min-h-[280px] md:min-h-[800px]"}>
-                                            <img
-                                                src={service.image}
-                                                className={
-                                                    index == 0 ? "relative -top-[28%] -right-[5%] z-10" :
-                                                        index == 1 ? "relative -top-[40%] -right-[5%] z-10" :
-                                                            "relative -top-[32%] -right-[15%] z-10"
-                                                }
-                                            />
+                    <Fade triggerOnce={true}>
+                        <h2>Our services</h2>
+                    </Fade>
+                    <Slide cascade={true} triggerOnce={true}>
+                        <div className={"flex flex-col md:flex-row gap-5 services  relative"}>
+                            {
+                                services.map((service, index) => (
+                                    <div key={index}
+                                         className={"md:flex flex-col justify-between md:w-1/3 pb-12 border border-[#505050] rounded"}>
+                                        <Fade>
+
+                                        </Fade>
+                                        <div className={"relative min-h-[630px]"}>
+                                            <div className={"relative overflow-hidden min-h-[280px] md:min-h-[800px]"}>
+                                                <img
+                                                    src={service.image}
+                                                    className={
+                                                        index == 0 ? "relative -top-[28%] -right-[5%] z-10" :
+                                                            index == 1 ? "relative -top-[40%] -right-[5%] z-10" :
+                                                                "relative -top-[32%] -right-[15%] z-10"
+                                                    }
+                                                />
+                                            </div>
+                                            <div
+                                                className={"relative -top-[30%] left-0 flex flex-col justify-between px-4 md:px-6"}>
+                                                <h3 className={"text-3xl md:text-5xl uppercase font-bold mb-3.5"}>{service.name}</h3>
+                                                <p className={"font-medium leading-normal md:text-lg"}>
+                                                    {service.description}
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div className={"relative -top-[30%] left-0 flex flex-col justify-between px-4 md:px-6"}>
-                                            <h3 className={"text-3xl md:text-5xl uppercase font-bold mb-3.5"}>{service.name}</h3>
-                                            <p className={"font-medium leading-normal md:text-lg"}>
-                                                {service.description}
-                                            </p>
+                                        <div className={"px-4 md:px-6 justify-self-end"}>
+                                            <a className={"p-0 link text-2xl"}>Send a request</a>
                                         </div>
                                     </div>
-                                    <div className={"px-4 md:px-6 justify-self-end"}>
-                                        <a className={"p-0 link text-2xl"}>Send a request</a>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
+                                ))
+                            }
+                        </div>
+                    </Slide>
+
                 </section>
                 <section className={""}>
-                    <h2>Brands we've worked with</h2>
+                    <Fade triggerOnce={true}>
+                        <h2>Brands we've worked with</h2>
+                    </Fade>
                     <div className={"flex justify-center"}>
                         <div className={"flex justify-center md:justify-evenly items-center max-w-[1360px] flex-wrap"}>
                             {
                                 logos.map((index) => (
-                                    <div className={"p-3 w-[40vw] md:w-fit"}>
-                                        <img src={`/logos/${index}.svg`}/>
-                                    </div>
+                                    <Fade cascade={true}>
+                                        <div className={"p-3 w-[40vw] md:w-fit"}>
+                                            <img src={`/logos/${index}.svg`}/>
+                                        </div>
+                                    </Fade>
+
                                 ))
                             }
                         </div>
@@ -99,8 +120,11 @@ function App() {
                 <section id={"contact"} className={"mb-72 relative"}>
                     <div className={"z-10 p-8 backdrop-blur rounded bg-black/10 "}>
                         <div className={"flex flex-col"}>
-                            <h4 className={"uppercase text-8xl font-medium leading-1 md:text-9xl md:leading-[110px] mb-8 md:mb-20 gradient-text"}>Ready<br/> to
-                                work<br/> with us?</h4>
+                            <Fade triggerOnce={true}>
+                                <h4 className={"uppercase text-8xl font-medium leading-1 md:text-9xl md:leading-[110px] mb-8 md:mb-20 gradient-text"}>Ready<br/> to
+                                    work<br/> with us?
+                                </h4>
+                            </Fade>
                             <div className={"flex flex-col md:flex-row justify-between"}>
                                 <div className={"leading-normal mb-32"}>
                                     <p className={"md:text-lg"}>Email us and let`s get started: </p>
