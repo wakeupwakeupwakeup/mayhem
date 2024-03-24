@@ -6,90 +6,90 @@ const services = [
     {
         name: "Creative campaigns",
         description: "At Mayhem Media, we excel in crafting creative campaigns and partnering with influencers to achieve your marketing goals. With strategic planning based on thorough brand and audience analysis, we tailor unique strategies aligned with your values. Our expert team selects ideal influencers for your brand, ensuring a perfect fit and maximum impact. We create captivating content that tells your story, managing all aspects of the campaign seamlesslay. Plus, we provide detailed reports on campaign performance, using data to continually refine our strategies.",
-        image: "../assets/service_shape_1.png",
+        image: "/service_shape_1.png",
     },
     {
         name: "Talent employees",
         description: "At Mayhem Media, our success is fueled by the talent and dedication of our exceptional team. From creative directors to campaign managers, each member brings unique skills and experiences, contributing to our dynamic work environment. Our influencers relations managers forge strong partnerships, while strategy consultants devise tailored plans. Behind the scenes, content creators craft compelling narratives, and data analysts provide valuable insights. Join us as we redefine creativity and collaboration in the digital landscape.",
-        image: "../assets/service_shape_2.png",
+        image: "/service_shape_2.png",
     },
     {
         name: "Social media",
         description: "We specialize in leveraging social media's power to elevate brands, engage audiences, and foster connections. Our experts craft tailored strategies for platforms like Facebook, Instagram, Twitter, and LinkedIn, ensuring maximum impact. From content creation to community management and performance tracking, we offer comprehensive solutions to boost brand awareness, generate leads, and foster customer loyalty.",
-        image: "../assets/service_shape_3.png",
+        image: "/service_shape_3.png",
     }
 ]
 
 const people = [
     {
         name: "John Doe",
-        image: "../../assets/people/people_1.png",
+        image: "/people_1.png",
         opacity: 100,
         position: "top-[28%] left-[26%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_2.png",
+        image: "/people_2.png",
         opacity: 25,
         position: "top-[40%] left-[72%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_3.png",
+        image: "/people_3.png",
         opacity: 100,
         position: "top-[0%] left-[45%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_4.png",
+        image: "/people_4.png",
         opacity: 100,
         position: "top-[64%] left-[32%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_5.png",
+        image: "/people_5.png",
         opacity: 0,
         position: "top-[55%] left-[15%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_6.png",
+        image: "/people_6.png",
         opacity: 0,
         position: "top-[25%] left-[5%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_7.png",
+        image: "/people_7.png",
         opacity: 0,
         position: "top-[5%] left-[15%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_8.png",
+        image: "/people_8.png",
         opacity: 0,
         position: "top-[62%] right-[16%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_9.png",
+        image: "/people_9.png",
         opacity: 0,
         position: "top-[16%] right-[34%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_10.png",
+        image: "/people_10.png",
         opacity: 0,
         position: "top-[42%] right-[34%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_11.png",
+        image: "/people_11.png",
         opacity: 0,
         position: "top-[75%] right-[30%]"
     },
     {
         name: "John Doe",
-        image: "../../assets/people/people_12.png",
+        image: "/people_12.png",
         opacity: 0,
         position: "top-[6%] right-[16%]"
     },
@@ -180,7 +180,7 @@ function App() {
                         {
                             people.map((item, index) => (
                                 <div className={`absolute flex flex-col items-center ${item.position} `}>
-                                <img className={`mb-2.5 opacity-${item.opacity} w-[5vw]`} src={`../../assets/people/people_${index+1}.png`}/>
+                                <img className={`mb-2.5 opacity-${item.opacity} w-[5vw]`} src={`/people_${index+1}.png`}/>
                                     <span className={`opacity-${item.opacity}`}>{item.name}</span>
                                 </div>
                             ))
