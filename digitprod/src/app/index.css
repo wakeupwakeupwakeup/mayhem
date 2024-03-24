@@ -23,7 +23,6 @@
   body {
     box-sizing: content-box;
     background-color: #080812;
-    transition: 0.5s ease;
   }
 
   main {
@@ -35,6 +34,14 @@
     font-family: "Saira", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+  }
+
+  p {
+    @apply md:text-lg;
+  }
+
+  a {
+    @apply md:text-xl
   }
 }
 
@@ -90,12 +97,16 @@
     font-family: "Teko", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    transition: 0.5s;
+    opacity: 0.8;
   }
 
   .menu-link:hover {
     background-image: linear-gradient(to right, #F65A78, #F9AE86);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    opacity: 1;
+
   }
 }
 
@@ -142,6 +153,26 @@
   }
 
   footer nav a {
-    @apply p-0
+    @apply p-0;
+  }
+
+  .arrows a {
+    display: flex;
+    align-items: center;
+  }
+  .arrows a:nth-child(even):after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../../public/arrow-right-down-line 2-1.svg");
+  }
+
+  .arrows a:nth-child(odd):after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../../public/arrow-right-down-line 2.svg");
   }
 }

@@ -29,7 +29,7 @@ export const Header = () => {
                     ))}
                 </nav>
                 <div className={"w-1/3 hidden md:inline-block text-end"}>
-                    <a className={"button-filled rounded-md px-4 py-3"}>To order </a>
+                    <a className={"button-filled rounded-md px-4 py-3"} href={"#contact"}>To order </a>
                 </div>
                 <div className={"md:hidden"}>
                     {

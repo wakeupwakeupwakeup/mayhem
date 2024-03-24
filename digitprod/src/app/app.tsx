@@ -44,9 +44,9 @@ function App() {
                             <p className={"leading-7 font-light"}>
                                 Join Mayhem Media and unleash your creativity in shaping innovative campaigns that captivate audiences and drive meaningful results. Explore exciting opportunities to collaborate with top brands and influencers, and be part of a dynamic team that thrives on pushing boundaries in the digital marketing realm. Take your career to new heights with Mayhem Media – where creativity meets excellence.
                             </p>
-                            <div className={"flex justify-between gap-4 md:gap-7"}>
-                                <a className={"button-filled"}>To order</a>
-                                <a className={"button"}>To market</a>
+                            <div className={"flex gap-4 md:gap-7 arrows"}>
+                                <a href={"#contact"} className={"button-filled"}>To order</a>
+                                <a href={"#contact"} className={"button"}>To market</a>
                             </div>
                         </div>
                         <div className={"relative max-w-full -top-[5%] -right-[0%] sm:top-[5%] md:right-[5%] md:-top-[25%]"}>
@@ -108,7 +108,9 @@ function App() {
                                 logos.map((index) => (
                                     <Fade cascade={true}>
                                         <div className={"p-3 w-[40vw] md:w-fit"}>
-                                            <img src={`/logos/${index}.svg`}/>
+                                            <a href={index == 1 ? "https://accounts.binance.com/register?ref=585785333" : ""}>
+                                                <img src={`/logos/${index}.svg`}/>
+                                            </a>
                                         </div>
                                     </Fade>
 
@@ -117,8 +119,8 @@ function App() {
                         </div>
                     </div>
                 </section>
-                <section id={"contact"} className={"mb-72 relative"}>
-                    <div className={"z-10 p-8 backdrop-blur rounded bg-black/10 "}>
+                <section  className={"mb-72 relative"}>
+                    <div className={"z-10 p-8 backdrop-blur rounded bg-black/10 "} id={"contact"}>
                         <div className={"flex flex-col"}>
                             <Fade triggerOnce={true}>
                                 <h4 className={"uppercase text-8xl font-medium leading-1 md:text-9xl md:leading-[110px] mb-8 md:mb-20 gradient-text"}>Ready<br/> to
@@ -128,10 +130,10 @@ function App() {
                             <div className={"flex flex-col md:flex-row justify-between"}>
                                 <div className={"leading-normal mb-32"}>
                                     <p className={"md:text-lg"}>Email us and let`s get started: </p>
-                                    <a className={"p-0 gradient-text text-lg md:text-2xl email"}>business@digitypemedia.com</a>
+                                    <a href={"mailto:business@digitypemedia.com"} className={"p-0 gradient-text text-lg md:text-2xl email" }>business@digitypemedia.com</a>
                                 </div>
                                 <div className={"px-10 py-5"}>
-                                    <a className={"button-filled"}>Send a request</a>
+                                    <a className={"button-filled"} href={"mailto:business@digitypemedia.com"}>Send a request</a>
                                 </div>
                             </div>
                         </div>
