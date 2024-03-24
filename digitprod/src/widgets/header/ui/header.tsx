@@ -1,4 +1,3 @@
-import { slide as Menu } from 'react-burger-menu'
 import {useState} from "react";
 
 const menu = [
