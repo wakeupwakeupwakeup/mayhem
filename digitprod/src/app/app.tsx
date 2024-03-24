@@ -98,9 +98,9 @@ function App() {
                     <div className={"flex justify-center"}>
                         <div className={"flex justify-center md:justify-evenly items-center max-w-[1360px] flex-wrap"}>
                             {
-                                imagePaths.map((logoPath) => (
+                                imagePaths.map((index) => (
                                     <div className={"p-3 w-[40vw] md:w-fit"}>
-                                        <img src={logoPath}/>
+                                        <img src={`/logos/${index+1}.svg`}/>
                                     </div>
                                 ))
                             }
