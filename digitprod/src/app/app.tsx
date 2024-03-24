@@ -1,6 +1,5 @@
 import {Header} from "../widgets/header"
 import {Footer} from "../widgets/footer"
-import {useEffect, useState} from "react";
 
 const services = [
     {
@@ -20,20 +19,10 @@ const services = [
     }
 ]
 
+const itemsCount = 12;
+const logos = Array.from({ length: itemsCount }, (_, index) => index + 1)
+
 function App() {
-    const [imagePaths, setImagePaths] = useState<string[]>([])
-
-    useEffect(() => {
-        const fetchImagePaths = async () => {
-            const imageModules = import.meta.glob('/logos/*.svg')
-            const paths = Object.keys(imageModules)
-            setImagePaths(paths)
-            console.log(paths)
-        }
-
-        fetchImagePaths()
-    }, [])
-
     return (
         <>
             <Header/>
@@ -98,7 +87,7 @@ function App() {
                     <div className={"flex justify-center"}>
                         <div className={"flex justify-center md:justify-evenly items-center max-w-[1360px] flex-wrap"}>
                             {
-                                imagePaths.map((index) => (
+                                logos.map((index) => (
                                     <div className={"p-3 w-[40vw] md:w-fit"}>
                                         <img src={`/logos/${index+1}.svg`}/>
                                     </div>
