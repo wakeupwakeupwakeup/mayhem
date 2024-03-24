@@ -180,7 +180,7 @@ function App() {
                         {
                             people.map((item, index) => (
                                 <div className={`absolute flex flex-col items-center ${item.position} `}>
-                                <img className={`mb-2.5 opacity-${item.opacity} w-[5vw]`} src={`/people_${index+1}.png`}/>
+                                <img className={`mb-2.5 opacity-${item.opacity} w-[5vw]`} src={`people//people_${index+1}.png`}/>
                                     <span className={`opacity-${item.opacity}`}>{item.name}</span>
                                 </div>
                             ))
@@ -218,10 +218,10 @@ function App() {
                         </div>
                     </div>
                     <div className={"-z-10"}>
-                        <img className={"absolute -top-[30%] right-5"} src={"../../assets/service_shape_1.png"}/>
-                        <img className={"absolute top-[20%] right-[40%] -z-10"} src={"../../assets/service_shape_2.png"}/>
+                        <img className={"absolute -top-[30%] right-5"} src={"/service_shape_1.png"}/>
+                        <img className={"absolute top-[20%] right-[40%] -z-10"} src={"/service_shape_2.png"}/>
                         <img className={"absolute -bottom-32 left-[45%] w-[240px] -z-10"}
-                             src={"../../assets/service_shape_3.png"}/>
+                             src={"/service_shape_3.png"}/>
                     </div>
 
                 </section>
