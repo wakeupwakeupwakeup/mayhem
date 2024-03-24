@@ -22,6 +22,10 @@
     background-color: #080812;
   }
 
+  main {
+    overflow-x: hidden;
+  }
+
   p, a {
     font-family: "Saira", sans-serif;
     font-optical-sizing: auto;
