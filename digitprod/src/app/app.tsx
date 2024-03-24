@@ -100,7 +100,7 @@ function App() {
 
     useEffect(() => {
         const fetchImagePaths = async () => {
-            const imageModules = import.meta.glob('../../assets/logos/*.svg')
+            const imageModules = import.meta.glob('/public/logos/*.svg')
             const paths = Object.keys(imageModules)
             setImagePaths(paths)
             console.log(paths)
@@ -135,7 +135,7 @@ function App() {
                 </section>
                 <section>
                 </section>
-                <section className={"mb-36"}>
+                <section id={"services"} className={"mb-36"}>
                     <h2>Our services</h2>
                     <div className={"flex flex-col md:flex-row gap-5 services  relative"}>
                         {
@@ -168,25 +168,6 @@ function App() {
                         }
                     </div>
                 </section>
-                <section className={"mb-36 min-h-[785px]"}>
-                    <div className={"relative circles flex flex-col justify-center min-h-[785px]"}>
-                        <div className={"text-center "}>
-                            <h2 className={"mb-0"}>Our<br/> talents</h2>
-                            <p>
-                                Here`s some of our awesome <br/>
-                                power rangers for the big stuff
-                            </p>
-                        </div>
-                        {
-                            people.map((item, index) => (
-                                <div className={`absolute flex flex-col items-center ${item.position} `}>
-                                <img className={`mb-2.5 opacity-${item.opacity} w-[5vw]`} src={`people//people_${index+1}.png`}/>
-                                    <span className={`opacity-${item.opacity}`}>{item.name}</span>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </section>
                 <section className={""}>
                     <h2>Brands we've worked with</h2>
                     <div className={"flex justify-center"}>
@@ -201,7 +182,7 @@ function App() {
                         </div>
                     </div>
                 </section>
-                <section className={"mb-72 relative"}>
+                <section id={"contact"} className={"mb-72 relative"}>
                     <div className={"z-10 p-8 backdrop-blur rounded bg-black/10 "}>
                         <div className={"flex flex-col"}>
                             <h4 className={"uppercase text-8xl font-medium leading-1 md:text-9xl md:leading-[110px] mb-8 md:mb-20 gradient-text"}>Ready<br/> to
@@ -218,9 +199,9 @@ function App() {
                         </div>
                     </div>
                     <div className={"-z-10"}>
-                        <img className={"absolute -top-[30%] right-5"} src={"/service_shape_1.png"}/>
-                        <img className={"absolute top-[20%] right-[40%] -z-10"} src={"/service_shape_2.png"}/>
-                        <img className={"absolute -bottom-32 left-[45%] w-[240px] -z-10"}
+                        <img className={"absolute top-[55%] -right-[25%] md:-top-[30%] md:right-5 w-[60vw]"} src={"/service_shape_1.png"}/>
+                        <img className={"absolute top-[20%] right-[40%] -z-10 w-[60vw]"} src={"/service_shape_2.png"}/>
+                        <img className={"absolute -bottom-[20%] -left-[15%] -z-10 w-[60vw]"}
                              src={"/service_shape_3.png"}/>
                     </div>
 

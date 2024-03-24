@@ -8,17 +8,12 @@ const menu = [
     },
     {
         name: 'Services',
-        link: '#',
+        link: '#services',
         icon: '/menu_icons/customer-service-2-line 1.svg'
     },
     {
-        name: 'Clients',
-        link: '#',
-        icon: '/menu_icons/user-line 1.svg'
-    },
-    {
         name: 'Contact',
-        link: '#',
+        link: '#contact',
         icon: '/menu_icons/contacts-book-2-line 1.svg'
     },
 ]
@@ -51,7 +46,7 @@ export const Header = () => {
                     <nav className={"absolute top-0 left-0 w-full flex bg-[#000711] flex-col z-30"}>
                         <div className={"flex flex-col p-6"}>
                             <div className={"flex justify-between mb-12"}>
-                                <span>Mayhem media</span>
+                                <span className={"uppercase text-lg gradient-text"}>Mayhem media</span>
                                 <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
                                     <img src={"/cross.svg"}/>
                                 </button>
