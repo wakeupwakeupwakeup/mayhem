@@ -129,7 +129,7 @@ function App() {
                             </div>
                         </div>
                         <div className={"relative max-w-full -top-[5%] -right-[0%] sm:top-[5%] md:right-[5%] md:-top-[25%]"}>
-                            <img src={"../../assets/bland.png"}/>
+                            <img src={"digitprod/assets/bland.png"}/>
                         </div>
                     </div>
                 </section>
