@@ -89,7 +89,7 @@ function App() {
                                             </div>
                                         </div>
                                         <div className={"px-4 md:px-6 justify-self-end"}>
-                                            <a className={"p-0 link text-2xl"}>Send a request</a>
+                                            <a className={"p-0 link text-2xl"} href={"#contact"}>Send a request</a>
                                         </div>
                                     </div>
                                 ))
