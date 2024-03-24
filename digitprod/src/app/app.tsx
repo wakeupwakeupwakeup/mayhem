@@ -20,81 +20,6 @@ const services = [
     }
 ]
 
-const people = [
-    {
-        name: "John Doe",
-        image: "/people_1.png",
-        opacity: 100,
-        position: "top-[28%] left-[26%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_2.png",
-        opacity: 25,
-        position: "top-[40%] left-[72%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_3.png",
-        opacity: 100,
-        position: "top-[0%] left-[45%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_4.png",
-        opacity: 100,
-        position: "top-[64%] left-[32%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_5.png",
-        opacity: 0,
-        position: "top-[55%] left-[15%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_6.png",
-        opacity: 0,
-        position: "top-[25%] left-[5%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_7.png",
-        opacity: 0,
-        position: "top-[5%] left-[15%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_8.png",
-        opacity: 0,
-        position: "top-[62%] right-[16%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_9.png",
-        opacity: 0,
-        position: "top-[16%] right-[34%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_10.png",
-        opacity: 0,
-        position: "top-[42%] right-[34%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_11.png",
-        opacity: 0,
-        position: "top-[75%] right-[30%]"
-    },
-    {
-        name: "John Doe",
-        image: "/people_12.png",
-        opacity: 0,
-        position: "top-[6%] right-[16%]"
-    },
-]
-
 function App() {
     const [imagePaths, setImagePaths] = useState<string[]>([])
 
@@ -199,9 +124,9 @@ function App() {
                         </div>
                     </div>
                     <div className={"-z-10"}>
-                        <img className={"absolute top-[55%] -right-[25%] md:-top-[30%] md:right-5 w-[60vw]"} src={"/service_shape_1.png"}/>
-                        <img className={"absolute top-[20%] right-[40%] -z-10 w-[60vw]"} src={"/service_shape_2.png"}/>
-                        <img className={"absolute -bottom-[20%] -left-[15%] -z-10 w-[60vw]"}
+                        <img className={"absolute top-[55%] -right-[25%] md:-top-[30%] md:right-5 w-[60vw] md:w-auto"} src={"/service_shape_1.png"}/>
+                        <img className={"absolute top-[20%] right-[40%] -z-10 w-[60vw] md:w-auto"} src={"/service_shape_2.png"}/>
+                        <img className={"absolute -bottom-[20%] -left-[15%] md:left-[10%] md:-bottom-[45%] -z-10 w-[60vw] md:w-auto"}
                              src={"/service_shape_3.png"}/>
                     </div>
 
