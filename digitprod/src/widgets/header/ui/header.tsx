@@ -4,22 +4,22 @@ const menu = [
     {
         name: 'Home',
         link: '#',
-        icon: '../../assets/menu_icons/home-line 1.svg'
+        icon: '/menu_icons/home-line 1.svg'
     },
     {
         name: 'Services',
         link: '#',
-        icon: '../../assets/menu_icons/customer-service-2-line 1.svg'
+        icon: '/menu_icons/customer-service-2-line 1.svg'
     },
     {
         name: 'Clients',
         link: '#',
-        icon: '../../assets/menu_icons/home-line 1.svg'
+        icon: '/menu_icons/user-line 1.svg'
     },
     {
         name: 'Contact',
         link: '#',
-        icon: '../../assets/menu_icons/home-line 1.svg'
+        icon: '/menu_icons/contacts-book-2-line 1.svg'
     },
 ]
 export const Header = () => {
@@ -40,7 +40,7 @@ export const Header = () => {
                     {
                         !isMenuOpen ? (
                             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                                <img src={"../../assets/menu.svg"}/>
+                                <img src={"/menu.svg"}/>
                             </button>
                         ) : null
                     }
@@ -53,7 +53,7 @@ export const Header = () => {
                             <div className={"flex justify-between mb-12"}>
                                 <span>Mayhem media</span>
                                 <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                                    <img src={"../../assets/cross.svg"}/>
+                                    <img src={"/cross.svg"}/>
                                 </button>
                             </div>
                             <div className={"flex flex-col items-end gap-3"}>
