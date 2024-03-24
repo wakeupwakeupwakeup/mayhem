@@ -20,10 +20,10 @@ const menu = [
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
     return (
-        <header id={"home"} className={"w-full"}>
+        <header id={"home"} className={"max-w-[100vw]]"}>
             <div className={"flex items-center justify-between"}>
                 <span className={"w-1/3 uppercase font-light text-white md:text-3xl"}>Mayhem Media</span>
-                <nav className={isMenuOpen? "flex w-full md:flex justify-center gap-12" : "hidden w-full md:flex justify-center gap-12"}>
+                <nav className={isMenuOpen? "hidden flex w-full md:flex justify-center gap-12" : "hidden w-full md:flex justify-center gap-12"}>
                     {menu.map((item, index) => (
                         <a className={"menu-link"} key={index} href={item.link}>{item.name}</a>
                     ))}
@@ -43,7 +43,7 @@ export const Header = () => {
             </div>
             {
                 isMenuOpen ? (
-                    <nav className={"absolute top-0 left-0 w-full flex bg-[#000711] flex-col z-30"}>
+                    <nav className={"absolute top-0 left-0 w-full max-w-[100vw] flex bg-[#000711] flex-col z-30"}>
                         <div className={"flex flex-col p-6"}>
                             <div className={"flex justify-between mb-12"}>
                                 <span className={"uppercase text-lg gradient-text"}>Mayhem media</span>
