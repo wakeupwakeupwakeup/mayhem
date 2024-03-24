@@ -15,7 +15,8 @@
   }
 
   html {
-
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
     scroll-behavior: smooth
   }
 
