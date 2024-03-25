@@ -21,9 +21,56 @@ const services = [
         image: "/service_shape_3.png",
     }
 ]
-
-const itemsCount = 12;
-const logos = Array.from({ length: itemsCount }, (_, index) => index + 1)
+const brands = [
+    {
+        logo: "/logos/1.svg",
+        link: "https://accounts.binance.com/register?ref=585785333"
+    },
+    {
+        logo: "/logos/2.svg",
+        link: "https://discord.com/"
+    },
+    {
+        logo: "/logos/3.svg",
+        link: "https://www.redbull.com/"
+    },
+    {
+        logo: "/logos/4.svg",
+        link: "https://www.ea.com/"
+    },
+    {
+        logo: "/logos/5.svg",
+        link: "https://hyperx.com/"
+    },
+    {
+        logo: "/logos/6.svg",
+        link: "https://www.kucoin.com/"
+    },
+    {
+        logo: "/logos/7.svg",
+        link: "https://mytonwallet.io/"
+    },
+    {
+        logo: "/logos/8.svg",
+        link: "https://nordvpn.com/"
+    },
+    {
+        logo: "/logos/9.svg",
+        link: "https://web.telegram.org/"
+    },
+    {
+        logo: "/logos/10.svg",
+        link: "https://tonkeeper.com/"
+    },
+    {
+        logo: "/logos/11.svg",
+        link: "https://twitter.com/"
+    },
+    {
+        logo: "/logos/12.svg",
+        link: "https://www.youtube.com/"
+    }
+]
 
 function App() {
     const { ref } = useParallax({
@@ -109,11 +156,11 @@ function App() {
                     <div className={"flex justify-center"}>
                         <div className={"flex justify-center md:justify-evenly items-center max-w-[1360px] flex-wrap"}>
                             {
-                                logos.map((index) => (
-                                    <Fade cascade={true}>
+                                brands.map((item, index) => (
+                                    <Fade cascade={true} key={index}>
                                         <div className={"p-3 w-[40vw] md:w-fit"}>
-                                            <a href={index == 1 ? "https://accounts.binance.com/register?ref=585785333" : ""}>
-                                                <img src={`/logos/${index}.svg`}/>
+                                            <a href={item.link}>
+                                                <img src={item.logo}/>
                                             </a>
                                         </div>
                                     </Fade>
@@ -134,10 +181,10 @@ function App() {
                             <div className={"flex flex-col md:flex-row justify-between"}>
                                 <div className={"leading-normal mb-32"}>
                                     <p className={"md:text-lg"}>Email us and let`s get started: </p>
-                                    <a href={"mailto:business@digitypemedia.com"} className={"p-0 gradient-text text-lg md:text-2xl email" }>business@digitypemedia.com</a>
+                                    <a href={"mailto:business@mayhemmedia.org"} className={"p-0 gradient-text text-lg md:text-2xl email" }>business@mayhemmedia.org</a>
                                 </div>
                                 <div className={"px-10 py-5"}>
-                                    <a className={"button-filled"} href={"mailto:business@digitypemedia.com"}>Send a request</a>
+                                    <a className={"button-filled"} href={"mailto:business@mayhemmedia.org"}>Send a request</a>
                                 </div>
                             </div>
                         </div>

@@ -8,7 +8,7 @@ export const Footer = () => {
                         <div className={"flex flex-col"}>
                             <span className={"uppercase font-light text-2xl text-white"}>Mayhem Media</span>
                             <div className={"socials"}>
-                                <span className={"uppercase font-light text-xl"}>Telegram</span>
+                                <a className={"uppercase font-light text-xl"} href={"https://t.me/mayhem_media"}>Telegram</a>
                             </div>
                         </div>
                         <nav className={"flex flex-col md:flex-row gap-6 items-end md:flex md:gap-12"}>
