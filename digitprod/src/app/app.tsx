@@ -69,6 +69,14 @@ const brands = [
     {
         logo: "/logos/12.svg",
         link: "https://www.youtube.com/"
+    },
+    {
+        logo: "/logos/13.svg",
+        link: "https://stake.fm/?c=hbNepZJT"
+    },
+    {
+        logo: "/logos/14.svg",
+        link: "https://www.bybit.com/invite?ref=PKPR9X"
     }
 ]
 
