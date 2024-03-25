@@ -22,7 +22,9 @@ export const Header = () => {
     return (
         <header id={"home"} className={"max-w-[100vw]]"}>
             <div className={"flex items-center justify-between"}>
-                <span className={"w-1/3 uppercase font-light text-white md:text-3xl"}>Mayhem Media</span>
+                <div className={"w-1/3"}>
+                    <img src={"/logo.svg"} />
+                </div>
                 <nav className={isMenuOpen? "hidden w-full md:flex justify-center gap-12" : "hidden w-full md:flex justify-center gap-12"}>
                     {menu.map((item, index) => (
                         <a className={"menu-link"} key={index} href={item.link}>{item.name}</a>
